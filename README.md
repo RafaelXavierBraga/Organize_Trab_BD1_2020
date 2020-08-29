@@ -54,7 +54,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
     b) Esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados 
     
-![Exemplo de Tabela de dados da Empresa Devcom](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/arquivos/TabelaSistemaOrganize%20(2).xlsx)
+![Exemplo de Tabela de dados da Empresa Devcom](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/arquivos/TabelaSistemaOrganize%20(2).xlsx?raw=true)
     
     
 ### 5.MODELO CONCEITUAL<br>
