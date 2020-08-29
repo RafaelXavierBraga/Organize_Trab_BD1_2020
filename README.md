@@ -75,7 +75,10 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
         
     
 #### 5.1 Validação do Modelo Conceitual
-    Não houve validação.
+    
+    > Grupo 01: Eduarda Simões, Gabrielle Azevedo Duda e Thiago Freitas (PedidON)
+Foi avaliado que na seção “5.2 Descrição dos dados” facilitaria a leitura das informações se separássemos a descrição dos dados por tabelas.
+
 
 #### 5.2 Descrição dos dados 
     PESSOA: Tabela que armazena as informações relativas a pessoa cliente da empresa.
@@ -83,17 +86,25 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     nome: Campo que armazena o nome de cada pessoa cliente da empresa.
     data_nascimento: Campo que armazena a data de nascimento de cada pessoa cliente da empresa.
     senha: Campo que armazena a senha de acesso de cada pessoa cliente da empresa.
+    
+    
     CONTATO: Tabela que armazena as informações relativas ao contato de uma pessoa cliente da empresa
     cod_contato: Campo que armazena o codigo do contato para cada pessoa cliente da empresa.
     contato: Campo que armazena qual o meio de contato para cada pessoa cliente da empresa.
+    
+    
     TRANSACAO: Tabela que armazena transações efetuadas pela pessoa cliente da empresa.
     cod_transacao: Campo que armazena o codigo da transação feita pela pessoa cliente da empresa.
     descricao_transacao: Campo que armazena a descrição da transação dada pela pessoa cliente da empresa.
     data_operacao: Campo que armazena a data que foi feita a transação pela pessoa cliente da empresa.
     valor: Campo que armazena o valor da transação feita pela pessoa cliente da empresa.
+    
+    
     TIPO: Tabela que armazena os tipos de operações possiveis para as transações.
     cod_tipo: Campo que armezena o codigo do tipo da transação.
     descricao_tipo: Campo que armazena qual o tipo da transação.
+    
+    
     ENDERECO: Tabela que armazena o endereço de cada pessoa cliente da empresa.
     cod_endereco: Campo que armazena a qual pessoa pertence o endereço.
     descricao_logradouro: Campo que armazena a descrição do logradouro residencial.
