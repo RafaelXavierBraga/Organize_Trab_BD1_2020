@@ -30,8 +30,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 ### 4.PROTOTIPAÇÃO, PERGUNTAS A SEREM RESPONDIDAS E TABELA DE DADOS<br>
 #### 4.1 RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 
-![Arquivo PDF do Protótipo Balsamiq feito para o Sistema Organize](https://github.com/PaitLega/TrabalhoBd/blob/master/Prototipo%20-%20Luiz%20Gagno%2C%20Rafael%20Xavier%20e%20Rita%20Guimaraes.pdf?raw=true "Sistema 
-Organize")
+![Arquivo PDF do Protótipo Balsamiq feito para o Sistema Organize](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/arquivos/Prototipo%20-%20Luiz%20Gagno%2C%20Rafael%20Xavier%20e%20Rita%20Guimaraes%20(2).pdf)
 
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
@@ -55,7 +54,7 @@ Organize")
     a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
     b) Esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados 
     
-![Exemplo de Tabela de dados da Empresa Devcom](https://github.com/discipbd1/trab01/blob/master/arquivos/TabelaEmpresaDevCom_sample.xlsx?raw=true "Tabela - Empresa Devcom")
+![Exemplo de Tabela de dados da Empresa Devcom](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/arquivos/TabelaSistemaOrganize%20(2).xlsx)
     
     
 ### 5.MODELO CONCEITUAL<br>
