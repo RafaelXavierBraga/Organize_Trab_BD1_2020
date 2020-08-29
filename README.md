@@ -5,46 +5,49 @@ Trabalho desenvolvido durante a disciplina de BD1
 
 ### 1. COMPONENTES<br>
 Integrantes do grupo<br>
-primeiro_componente_do_grupo:email_primeiro_componente@dominio.com<br>
-segundo_componente_do_grupo:email_segundo_componente@dominio.com<br>
-...<br>
+Luiz Eduardo Gagno Amancio: luizgagnoamancio@gmail.com<br>
+Rafael Xavier Braga: rafaelxavierbraga@gmail.com<br>
+Rita da Silva Alves Guimarães: ritaalvesguimaraes@gmail.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO<br>
-Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
-<br>e motivação da escolha realizada. <br>
+Este documento contém a especificação do projeto do banco de dados <Organize> <br>e motivação da escolha realizada. <br>
 
-> A empresa "Devcom Projetos" visa colaborar com desenvolvimento de projetos para uma sociedade melhor. Sabendo-se dos desafios para gerenciar projetos dentro de uma empresa e visando unir as informações relativas a funcionários, departamentos e projetos em um mesmo local, ficamos motivados com o desenvolvimento deste sistema. O Sistema "Devcom" tem como objetivo gerenciar todas as informações ao desenvolvimento das atividades de projetos em diversas localidades do país. Para realizar suas operações adequadamente e empresa necessita que sistema que armazene informações relativas aos Projetos, Departamentos e Empregados, além de também armazenar dados sobre  Dependentes e Históricos de Salário dos empregados. O sistema deverá gerar um conjunto de relatórios que por sua vez atenderá os anseios da empresa em questão.
+> O sistema "Organize" visa auxiliar seus usuários a terem um maior controle e organização de sua vida financeira, possibilitando uma melhor gerência sobre suas despesas e receitas com objetivo de uma vida com menos inadimplência, mais planejamento e consequentemente melhor qualidade de vida. Saber o quanto ganha e quais seus gastos facilita na administração das finanças de todos, muita das vezes não é uma renda que não é suficiente e sim uma renda que está sendo mal administrada por falta de uma melhor organização e certo desconhecimento sobre a destinação de seu dinheiro. Diante disso surgiu o interesse em desenvolver o sistema "organize" visando unir as informações relativas à todas as receitas e despesas em uma única ferramenta, com consulta de fácil acesso, em um mesmo local e sempre à mão, com o intuito de gerar relatórios e informar seus usuários quais valores o mesmo obteve como receita e quais foram suas destinações.
+
  
 
 ### 3.MINI-MUNDO<br>
 
-Descrever o mini-mundo! (Não deve ser maior do que 30 linhas, se necessário resumir para justar) <br>
-Entrevista com o usuário e identificação dos requisitos.(quando for o caso de sistemas com cliente  real)<br>
-Descrição textual das regras de negócio definidas como um  subconjunto do mundo real 
-cujos elementos são propriedades que desejamos incluir, processar, armazenar, 
-gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
+>O sistema “Organize” conterá as informações aqui detalhadas. Da pessoa deverá ser armazenado o nome, cpf, data de nascimento, senha e forma de contato, seja ele e-mail ou telefone. Cada pessoa deve ter pelo menos uma forma de contato. 
+Do endereço serão armazenados descrição logradouro, logradouro, número, bairro, município, cep e estado. Cada pessoa deve possuir pelo menos um endereço.
+Em relação às transações serão armazenados: código da transação, descrição da transação, valor e data da operação. 
+É importante destacar que cada pessoa pode possuir nenhuma ou várias transações, mas uma transação está associada apenas a uma única  pessoa. 
+E cada transação deve possuir um tipo que deverão possuir código e descrição do tipo de transação. Em relação ao tipo de transação  cada tipo pode ou não está associado a uma transação, mas cada transação deve possuir um tipo. 
 
-> O sistema proposto para a "Devcom Projetos conterá as informacões aqui detalhadas. Dos Projetos serão armazenados o número, nome e cidade. Dos Departamentos serão armazenados o número e nome. O cliente destacou que cada projeto pode ter vários departamentos auxiliando no seu desenvolvimento, e cada departamento pode estar envolvido em vários projetos. Os dados relativos aos empregados que serão armazenados são: rg, nome, cpf, salário, data inicial do salario e supervisor de cada empregado. É importante destacar que cada empregado pode ser supervisionado por outro empregado, e obrigatoriamente deve estar alocado a um único departamento, mas pode gerenciar vários departamentos ou não gerenciar nenhum. Um empregado também pode participar de vários projetos, caso seja necessário, mas não precisa obrigatoriamente estar alocado em algum projeto. Com relação aos dependentes serão armazenadas as informações de nome do dependente, data de nascimento, sexo e grau de parentesco. Cada empregado pode ter vários dependentes, mas um dependente esta associado apenas a um único empregado. Com relação ao histórico de salário devemos armazenar as informações de valor do salário, data de início do salário no período e data final do salário no período. É importante lembrar que cada funcionario pode ter diversos eventos de histórico de salário associados a ele visto que este dado pode ser alterado várias vezes. 
+ 
+
 
 ### 4.PROTOTIPAÇÃO, PERGUNTAS A SEREM RESPONDIDAS E TABELA DE DADOS<br>
 #### 4.1 RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
-Neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
 
-Sugestão: https://balsamiq.com/products/mockups/<br>
+![Arquivo PDF do Protótipo Balsamiq feito para o Sistema Organize](https://github.com/PaitLega/TrabalhoBd/blob/master/Prototipo%20-%20Luiz%20Gagno%2C%20Rafael%20Xavier%20e%20Rita%20Guimaraes.pdf?raw=true "Sistema 
+Organize")
 
-![Alt text](https://github.com/discipbd1/trab01/blob/master/balsamiq.png?raw=true "Title")
-![Arquivo PDF do Protótipo Balsamiq feito para Empresa Devcom](https://github.com/discipbd1/trab01/blob/master/arquivos/EmpresaDevcom.pdf?raw=true "Empresa Devcom")
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
     
-> A Empresa DevCom precisa inicialmente dos seguintes relatórios:
-* Relatório que mostre o nome de cada supervisor(a) e a quantidade de empregados supervisionados.
-* Relatório relativo aos os supervisores e supervisionados. O resultado deve conter o nome do supervisor e nome do supervisionado além da quantidade total de horas que cada supervisionado tem alocada aos projetos existentes na empresa.
-* Relatorio que mostre para cada linha obtida o nome do departamento, o valor individual de cada salario existente no  departamento e a média geral de salarios dentre todos os empregados. Os resultados devem ser apresentados ordenados por departamento.
-* Relatório que mostre as informações relacionadas a todos empregados de empresa (sem excluir ninguém). As linhas resultantes devem conter informações sobre: rg, nome, salario do empregado, data de início do salario atual, nomes dos projetos que participa, quantidade de horas e localização nos referidos projetos, numero e nome dos departamentos aos quais está alocado, informações do historico de salário como inicio, fim, e valores de salarios antigos que foram inclusos na referida tabela (caso possuam informações na mesma), além de todas informações relativas aos dependentes. 
->> ##### Observações: <br> a) perceba que este relatório pode conter linhas com alguns dados repetidos (mas não todos). <br>  b) para os empregados que não possuirem alguma destas informações o valor no registro deve aparecer sem informação/nulo. 
-* Relatório que obtenha a frequencia absoluta e frequencia relativa da quantidade de cpfs únicos no relatório anterior. Apresente os resultados ordenados de forma decrescente pela frequencia relativa.
+>* Relatório que mostre todas transações realizadas que foram categorizadas como despesas, esse relatório deve conter: descrição da transação, valor, descrição do tipo e a data da transação.
+
+* Relatório que mostre todas transações realizadas que foram categorizadas como receitas, esse relatório deve conter: descrição da transação, valor, descrição do tipo e a data da transação.
+
+* Relatório que apresenta a movimentação financeira sendo filtrada pelo tipo de receita desejada, esse relatório deve conter a descrição da transação, valor e a data da transação.
+
+* Relatório que apresenta a movimentação financeira sendo filtrada pelo tipo de despesa desejada, esse relatório deve conter a descrição, valor e a data da transação.
+
+* Relatório por e-mail com as informações pertinentes às despesas,  o relatório deve apresentar as seguintes informações: código da transação, descrição da transação, valor, data da operação e descrição do tipo da transação.
+
+* Relatório por e-mail com as informações pertinentes às receitas,  o relatório deve apresentar as seguintes informações: código da transação, descrição da transação, valor, data da operação e descrição do tipo da transação.
 
  
  
