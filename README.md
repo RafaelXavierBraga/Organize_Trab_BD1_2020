@@ -36,7 +36,9 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
     
->* Relatório que mostre todas transações realizadas que foram categorizadas como despesas, esse relatório deve conter: descrição da transação, valor, descrição do tipo e a data da transação.
+>
+
+* Relatório que mostre todas transações realizadas que foram categorizadas como despesas, esse relatório deve conter: descrição da transação, valor, descrição do tipo e a data da transação.
 
 * Relatório que mostre todas transações realizadas que foram categorizadas como receitas, esse relatório deve conter: descrição da transação, valor, descrição do tipo e a data da transação.
 
