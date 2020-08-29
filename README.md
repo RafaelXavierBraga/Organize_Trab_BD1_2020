@@ -74,8 +74,7 @@ Organize")
         
     
 #### 5.1 Validação do Modelo Conceitual
-    [Grupo01]: [Nomes dos que participaram na avaliação]
-    [Grupo02]: [Nomes dos que participaram na avaliação]
+    Não houve validação.
 
 #### 5.2 Descrição dos dados 
     PESSOA: Tabela que armazena as informações relativas a pessoa cliente da empresa.
@@ -106,7 +105,7 @@ Organize")
 
 
 ### 6	MODELO LÓGICO<br>
-![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/bd_modeloconceitual.png)
+![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/bd_modelologico.png)
 
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas em SQL/DDL 
