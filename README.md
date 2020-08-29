@@ -78,17 +78,35 @@ Organize")
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 Descrição dos dados 
-    [objeto]: [descrição do objeto]
-    
-    EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+    PESSOA: Tabela que armazena as informações relativas a pessoa cliente da empresa.
+    cpf: Campo que armazena o número de Cadastro de Pessoa Física para cada pessoa cliente da empresa.
+    nome: Campo que armazena o nome de cada pessoa cliente da empresa.
+    data_nascimento: Campo que armazena a data de nascimento de cada pessoa cliente da empresa.
+    senha: Campo que armazena a senha de acesso de cada pessoa cliente da empresa.
+    CONTATO: Tabela que armazena as informações relativas ao contato de uma pessoa cliente da empresa
+    cod_contato: Campo que armazena o codigo do contato para cada pessoa cliente da empresa.
+    contato: Campo que armazena qual o meio de contato para cada pessoa cliente da empresa.
+    TRANSACAO: Tabela que armazena transações efetuadas pela pessoa cliente da empresa.
+    cod_transacao: Campo que armazena o codigo da transação feita pela pessoa cliente da empresa.
+    descricao_transacao: Campo que armazena a descrição da transação dada pela pessoa cliente da empresa.
+    data_operacao: Campo que armazena a data que foi feita a transação pela pessoa cliente da empresa.
+    valor: Campo que armazena o valor da transação feita pela pessoa cliente da empresa.
+    TIPO: Tabela que armazena os tipos de operações possiveis para as transações.
+    cod_tipo: Campo que armezena o codigo do tipo da transação.
+    descricao_tipo: Campo que armazena qual o tipo da transação.
+    ENDERECO: Tabela que armazena o endereço de cada pessoa cliente da empresa.
+    cod_endereco: Campo que armazena a qual pessoa pertence o endereço.
+    descricao_logradouro: Campo que armazena a descrição do logradouro residencial.
+    logradouro: Campo que armazena o logradouro residencial.
+    numero: Campo que armazena o número residencial.
+    bairro: Campo que armazena o bairro residencial.
+    municipio: Campo que armazena o municipio residencial.
+    cep: Campo que armazena o CEP residencial.
+    estado: Campo que armazena o estado residencial.
 
 
 ### 6	MODELO LÓGICO<br>
-        a) inclusão do esquema lógico do banco de dados
-        b) verificação de correspondencia com o modelo conceitual 
-        (não serão aceitos modelos que não estejam em conformidade)
+![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/bd_modeloconceitual.png)
 
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas em SQL/DDL 
