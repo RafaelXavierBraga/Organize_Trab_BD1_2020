@@ -1,4 +1,4 @@
-# TRABALHO 01:  Título do Trabalho
+# TRABALHO 01:  Sistema Organize
 Trabalho desenvolvido durante a disciplina de BD1
 
 # Sumário
@@ -77,7 +77,8 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 #### 5.1 Validação do Modelo Conceitual
     
     Grupo 01: Eduarda Simões, Gabrielle Azevedo Duda e Thiago Freitas (PedidON)
-    Foi avaliado que na seção “5.2 Descrição dos dados” facilitaria a leitura das informações se separássemos a descrição dos dados por tabelas.
+    Foi avaliado que na seção 5.2 Descrição dos dados facilitaria a leitura das informações se separássemos 
+    a descrição dos dados por tabelas.
 
 
 #### 5.2 Descrição dos dados 
