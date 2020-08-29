@@ -30,7 +30,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 ### 4.PROTOTIPAÇÃO, PERGUNTAS A SEREM RESPONDIDAS E TABELA DE DADOS<br>
 #### 4.1 RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 
-![Arquivo PDF do Protótipo Balsamiq feito para o Sistema Organize](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/arquivos/Prototipo%20-%20Luiz%20Gagno%2C%20Rafael%20Xavier%20e%20Rita%20Guimaraes%20(2).pdf)
+![Arquivo PDF do Protótipo Balsamiq feito para o Sistema Organize](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/raw/master/arquivos/Prototipo%20-%20Luiz%20Gagno%2C%20Rafael%20Xavier%20e%20Rita%20Guimaraes%20(2).pdf)
 
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
