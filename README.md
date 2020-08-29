@@ -10,7 +10,6 @@ Rafael Xavier Braga: rafaelxavierbraga@gmail.com<br>
 Rita da Silva Alves Guimarães: ritaalvesguimaraes@gmail.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO<br>
-Este documento contém a especificação do projeto do banco de dados <Organize> <br>e motivação da escolha realizada. <br>
 
 > O sistema "Organize" visa auxiliar seus usuários a terem um maior controle e organização de sua vida financeira, possibilitando uma melhor gerência sobre suas despesas e receitas com objetivo de uma vida com menos inadimplência, mais planejamento e consequentemente melhor qualidade de vida. Saber o quanto ganha e quais seus gastos facilita na administração das finanças de todos, muita das vezes não é uma renda que não é suficiente e sim uma renda que está sendo mal administrada por falta de uma melhor organização e certo desconhecimento sobre a destinação de seu dinheiro. Diante disso surgiu o interesse em desenvolver o sistema "organize" visando unir as informações relativas à todas as receitas e despesas em uma única ferramenta, com consulta de fácil acesso, em um mesmo local e sempre à mão, com o intuito de gerar relatórios e informar seus usuários quais valores o mesmo obteve como receita e quais foram suas destinações.
 
@@ -33,8 +32,6 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 ![Arquivo PDF do Protótipo Balsamiq feito para o Sistema Organize](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/raw/master/arquivos/Prototipo%20-%20Luiz%20Gagno%2C%20Rafael%20Xavier%20e%20Rita%20Guimaraes%20(2).pdf)
 
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
-    a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
-    b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
     
 >
 
@@ -53,21 +50,13 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
  
  
 #### 4.3 TABELA DE DADOS DO SISTEMA:
-    a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
-    b) Esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados 
+
     
 ![Tabela de dados do Sistema Organize](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/raw/master/arquivos/TabelaSistemaOrganize%20(2).xlsx)
     
     
 ### 5.MODELO CONCEITUAL<br>
-    A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
-    B) O mínimo de entidades do modelo conceitual pare este trabalho será igual a 3 e o Máximo 5.
-        * informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)       
-    C) Principais fluxos de informação/entidades do sistema (mínimo 3). <br>Dica: normalmente estes fluxos estão associados as tabelas que conterão maior quantidade de dados 
-    D) Qualidade e Clareza
-        Garantir que a semântica dos atributos seja clara no esquema (nomes coerentes com os dados).
-        Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
-        e tuplas falsas (Aplicar os conceitos de normalização abordados).   
+   
         
 ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/bd_modeloconceitual.png)
     
@@ -82,6 +71,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 
 
 #### 5.2 Descrição dos dados 
+
     PESSOA: Tabela que armazena as informações relativas a pessoa cliente da empresa.
     cpf: Campo que armazena o número de Cadastro de Pessoa Física para cada pessoa cliente da empresa.
     nome: Campo que armazena o nome de cada pessoa cliente da empresa.
@@ -118,6 +108,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 
 
 ### 6	MODELO LÓGICO<br>
+
 ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/bd_modelologico.png)
 
 ### 7	MODELO FÍSICO<br>
@@ -133,6 +124,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
         
        
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
+
         INSERT INTO TIPO values(1,'Saque'),(2,'Despesa'),(3,'Investimento'),(4,'Receita'),(5,'Depósito');
 
         INSERT INTO PESSOA values(10104361234,'Ana Gomes','1995/01/11','123456'),(12945630790,'Sofia Salles','2000/04/22','675893'),(47345893011,'Fabio  Nunes','1998/10/30','174524'),(58457731459,'João Almeida','1970/07/15','Joao123');
