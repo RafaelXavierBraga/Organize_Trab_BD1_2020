@@ -107,8 +107,15 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/bd_modelologico.png)
 
 ### 7	MODELO FÍSICO<br>
-        a) inclusão das instruções de criacão das estruturas em SQL/DDL 
-        (criação de tabelas, alterações, etc..) 
+        create table TIPO(cod_tipo int,descricao_tipo varchar(100),primary key (cod_tipo);
+        
+        create table PESSOA(cpf bigint,nome varchar(100),data_nascimento date,senha varchar(100),primary key (cpf));
+        
+        create table CONTATO(cpf_pessoa bigint,contato varchar(100),foreign key (cpf_pessoa) references PESSOA (cpf));       
+        
+        create table ENDERECO(cpf_pessoa bigint,logradouro varchar(100),descricao_logradouro varchar(100),numero int,bairro varchar(100),municipio varchar(100),cep int,estado char(2),foreign key (cpf_pessoa) references PESSOA(cpf));       
+        
+        create table TRANSACAO(cod_transacao int,cpf_pessoa bigint,tipo int,descricao varchar(100),data_operacao date,valor float,primary key (cod_transacao), foreign key (cpf_pessoa) references PESSOA (cpf),foreign key (tipo) references TIPO(cod_tipo)); 
         
        
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
