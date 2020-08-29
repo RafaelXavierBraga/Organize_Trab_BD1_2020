@@ -112,18 +112,48 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
         
        
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
-        (Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados + insert para dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
-        (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
+        INSERT INTO TIPO values(1,'Saque'),(2,'Despesa'),(3,'Investimento'),(4,'Receita'),(5,'Depósito');
+
+        INSERT INTO PESSOA values(10104361234,'Ana Gomes','1995/01/11','123456'),(12945630790,'Sofia Salles','2000/04/22','675893'),(47345893011,'Fabio  Nunes','1998/10/30','174524'),(58457731459,'João Almeida','1970/07/15','Joao123');
+
+        INSERT INTO CONTATO values(10104361234,'anagomes@gmail.com'),(10104361234,'27997648129'),(47345893011,'27998524459'),(47345893011,'fNunes@gmail.com'),(12945630790,'27998562473'),(58457731459,'JAlmeida@gmail.com');
+
+        INSERT INTO ENDERECO values (10104361234,'Rua','Sabino Alves', 1122, 'Feu Rosa', 'Serra',29100200, 'ES'),(12945630790,'Avenida', 'Pedro Nolasco', 1123, 'Colina da Serra', 'Serra' ,29100201, 'ES'),(47345893011,'Rua', 'Beija Flor', 67, 'Laranjeiras', 'São Paulo',29100202, 'SP'),(58457731459,'Rua', 'Herman Stern', 235, 'Jacaraipe', 'Serra',29100203, 'ES');
+
+        INSERT INTO TRANSACAO values(1000,47345893011,4,'salario','2020/07/01',14500.00),(1102,10104361234,4,'recebimento aluguel','2020/07/05',2224.00),(1006,12945630790,2,'pagamento IPVA','2020/07/08',803.00),(1010,47345893011,2,'pagamento cartao de crédito','2020/07/10',6125.00),(1132,47345893011,3,'tesouro direto','2020/01/11',5000.00),(1360,47345893011,3,'bolsa de valores','2020/06/11',3000.00),(1456,58457731459,5,'poupança Itaú','2020/07/14',2500.00),(1589,12945630790,5,'poupança Caixa','2020/07/15',1500.00);                
+       
+        create table contato_backup as select * from contato;
+        create table pessoa_backup as select * from pessoa;
+        create table transacao_backup as select * from transacao;
+        create table tipo_backup as select * from tipo;
+        create table endereco_backup as select * from endereco;
 
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-    OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
+    select nome from pessoa;
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/nomeFromPessoa.png)
+    
+    select contato from contato;
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/contatoFromContato.png)
+    
+    select tipo,cpf_pessoa from transacao;
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/tipoCpfFromTransacao.png)
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
-># Marco de Entrega 01: Do item 1 até o item 9.1<br>
+    select * from pessoa;
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/selectPessoa.png)
+    
+    select * from tipo;
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/selectTipo.png)
+    
+    select * from endereco;
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/selectEndereco.png)
+    
+    select * from contato;
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/selectContato.png)
+    
+    select * from transacao;
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/selectTransacao.png)
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
