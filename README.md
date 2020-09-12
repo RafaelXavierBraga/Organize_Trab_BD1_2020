@@ -468,7 +468,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     select nome,count(transacao.cpf_pessoa) from pessoa
     inner join
     transacao on(transacao.cpf_pessoa = pessoa.cpf)
-    group by pessoa.nome
+    group by pessoa.nome;
    ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.7/2.png)
 
     select nome,count(transacao.cpf_pessoa) from pessoa
