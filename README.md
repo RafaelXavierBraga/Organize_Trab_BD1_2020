@@ -445,7 +445,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
         
     create view pessoa_sem_transacao as select * from pessoa where (pessoa.cpf not in (select transacao.cpf_pessoa from transacao));
     select * from pessoa_sem_transacao;
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.9/pessoa_sem_transacao.png)
     
     create view transacao_por_pessoa as
     select pessoa.cpf,pessoa.nome, count(pessoa.cpf) as "quantidade de transações"
@@ -454,7 +454,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     on(pessoa.cpf = transacao.cpf_pessoa)
     group by pessoa.cpf;
     select * from transacao_por_pessoa;
-   ![Alt text]() 
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.9/transacao_por_pessoa.png) 
 
     create view transacao_tipo_saque as
     select pessoa.cpf, pessoa.nome, transacao.cod_transacao, tipo.descricao_tipo, transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
@@ -463,7 +463,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     inner join tipo
     on (transacao.tipo=tipo.cod_tipo);
     select * from transacao_tipo_saque;
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.9/transacao_tipo_saque.png)
     
     create view transacao_tipo_despesa as
     select pessoa.cpf, pessoa.nome, transacao.cod_transacao, tipo.descricao_tipo, transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
@@ -472,7 +472,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     inner join tipo
     on (transacao.tipo=tipo.cod_tipo);
     select * from transacao_tipo_despesa;
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.9/transacao_tipo_despesa.png)
    
     create view transacao_tipo_investimento as
     select pessoa.cpf, pessoa.nome, transacao.cod_transacao, tipo.descricao_tipo, transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
@@ -481,7 +481,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     inner join tipo
     on (transacao.tipo=tipo.cod_tipo);
     select * from transacao_tipo_investimento;
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.9/transacao_tipo_investimento.png)
     
     create view transacao_tipo_receita as
     select pessoa.cpf, pessoa.nome, transacao.cod_transacao, tipo.descricao_tipo, transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
@@ -490,7 +490,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     inner join tipo
     on (transacao.tipo=tipo.cod_tipo);
     select * from transacao_tipo_receita;
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.9/transacao_tipo_receita.png)
     
     create view transacao_tipo_deposito as
     select pessoa.cpf, pessoa.nome, transacao.cod_transacao, tipo.descricao_tipo, transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
@@ -499,14 +499,14 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     inner join tipo
     on (transacao.tipo=tipo.cod_tipo);
     select * from transacao_tipo_deposito;
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.9/transacao_tipo_deposito.png)
    
     create view residentes_es as
     select pessoa.nome,pessoa.cpf,endereco.logradouro,endereco.descricao_logradouro,endereco.numero from pessoa
     inner join endereco
     on(pessoa.cpf = endereco.cpf_pessoa and endereco.estado = 'ES');
     select * from residentes_es;
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.9/residentes_es.png)
    
     create view soma_por_tipo as
     select tipo.descricao_tipo, sum(transacao.valor) from tipo
@@ -514,7 +514,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     on (tipo.cod_tipo = transacao.tipo)
     group by tipo.descricao_tipo;
     select * from soma_por_tipo;
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.9/soma_por_tipo.png)
 
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
