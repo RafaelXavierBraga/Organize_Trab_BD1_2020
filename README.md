@@ -237,7 +237,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
 
-    a) Consultas que envolvam os operadores lógicos AND, OR e Not
+#### a) Consultas que envolvam os operadores lógicos AND, OR e Not
     
     
     select *from transacao where (cpf_pessoa = 47345893011 and valor < 5000);
@@ -251,7 +251,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     select *from endereco where estado not in ('ES');
    
     
-    b) Consultas com operadores aritméticos 
+#### b) Consultas com operadores aritméticos 
     
     
     select cpf_pessoa, valor, (valor*1.15) as novo_salario from  transacao where descricao = 'salario';
@@ -262,7 +262,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     
     
     
-    c) Consultas com operação de renomear nomes de campos ou tabelas
+#### c) Consultas com operação de renomear nomes de campos ou tabelas
     
     
     select cpf_pessoa as cpf_cliente, logradouro, descricao_logradouro as descricao, numero as num, municipio as cidade,estado from endereco as endereco_completo;
@@ -277,7 +277,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
 
-    a) Consultas que envolvam like ou ilike
+#### a) Consultas que envolvam like ou ilike
     
     select *from pessoa where nome ilike '%ana%';
     
@@ -293,7 +293,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     
     
     
-    b) Criar uma consulta para cada tipo de função data apresentada.
+#### b) Consultas que envolvam funções datas.
     
     
     select cpf_pessoa, descricao,valor, current_date - (data_operacao) as realizada_ha_qts_dias from transacao ;
