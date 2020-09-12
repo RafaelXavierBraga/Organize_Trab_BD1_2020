@@ -401,9 +401,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     b) Criar minimo 3 de atualização
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
-    a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
-    b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
-    
+
        select nome,contato.contato,tipo.descricao_tipo,transacao.cod_transacao from pessoa
        inner join
        transacao on(transacao.cpf_pessoa = pessoa.cpf)
@@ -460,13 +458,17 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
    ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.6/7.png)
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
-    a) Criar minimo 2 envolvendo algum tipo de junção
-    select nome from pessoa
-    group by nome
+    
+    select pessoa.nome,estado from endereco
+    inner join
+    pessoa on(endereco.cpf_pessoa = pessoa.cpf)
+    group by estado,pessoa.nome;
    ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.7/1.png)
 
-    select cod_transacao from transacao
-    group by cod_transacao;
+    select nome,count(transacao.cpf_pessoa) from pessoa
+    inner join
+    transacao on(transacao.cpf_pessoa = pessoa.cpf)
+    group by pessoa.nome
    ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.7/2.png)
 
     select nome,count(transacao.cpf_pessoa) from pessoa
@@ -481,17 +483,14 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     group by pessoa.nome;
    ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.7/4.png)
 
-    select cep,cpf_pessoa from endereco
-    group by cep,cpf_pessoa;
+    select cod_transacao,tipo from transacao
+    group by tipo,cod_transacao;
    ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.7/5.png)
 
-    select cpf_pessoa,data_operacao from transacao
-    group by cpf_pessoa,data_operacao;
+    select descricao,tipo from transacao
+    group by tipo,descricao;
    ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.7/6.png)
 
-    select nome,data_nascimento from pessoa
-    group by nome,data_nascimento;
-   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.7/7.png)
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
     select tipo.cod_tipo,tipo.descricao_tipo,transacao.cpf_pessoa 
