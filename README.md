@@ -225,7 +225,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
     select *from transacao where valor > 2000;
-    ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/9.2/CONSULTAS%20DAS%20TABELAS%20COM%20FILTROS%20WHERE%20-%201.PNG)
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/9.2/CONSULTAS%20DAS%20TABELAS%20COM%20FILTROS%20WHERE%20-%201.PNG)
     
     select *from transacao where tipo = 4;
     
