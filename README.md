@@ -229,11 +229,22 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     
     select *from transacao where tipo = 4;
     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.2/CONSULTAS%20DAS%20TABELAS%20COM%20FILTROS%20WHERE%20-2.PNG)
+    
     select cpf_pessoa from endereco where municipio = 'Serra';
+    
+
+   ![Alt text](     
     
     select descricao, data_operacao, valor from transacao where cpf_pessoa = 47345893011;
     
+
+   ![Alt text](     
+    
     select *from pessoa where data_nascimento > '1995-01-01';
+    
+
+   ![Alt text](     
     
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
@@ -242,15 +253,30 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     
     
     select *from transacao where (cpf_pessoa = 47345893011 and valor < 5000);
+    
+
+   ![Alt text](     
    
     
     select data_operacao, valor from transacao where (cod_transacao >= 1000 and cod_transacao <= 1100);
     
+
+   ![Alt text](     
+    
     select cpf_pessoa, descricao, valor from transacao where (tipo = 2) or (tipo = 4);
+    
+
+   ![Alt text](     
     
     select *from transacao where(valor >= 2000) or (data_operacao > '2020-06-30');
     
+
+   ![Alt text](     
+    
     select *from endereco where estado not in ('ES');
+    
+
+   ![Alt text](     
    
     
 #### b) Consultas com operadores aritméticos 
@@ -258,9 +284,18 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     
     select cpf_pessoa, valor, (valor*1.15) as novo_salario from  transacao where descricao = 'salario';
     
+
+   ![Alt text](     
+    
     select cpf_pessoa, descricao, valor, (valor *0.03) as rendimento_deposito from transacao where tipo=5;
     
+
+   ![Alt text](     
+    
     select cpf_pessoa, descricao, valor, (valor / 2) as Percas_Investimento from transacao where tipo=3;    
+    
+
+   ![Alt text](     
     
     
     
@@ -270,11 +305,23 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     select cpf_pessoa as cpf_cliente, logradouro, descricao_logradouro as descricao, numero as num, municipio as cidade,estado 
     from endereco as endereco_completo;
     
+
+   ![Alt text](     
+    
     select cpf as cpf_cliente, nome as nome_completo, data_nascimento as dat_nasc from pessoa as Cadastro_Cliente;
+    
+
+   ![Alt text](     
     
     select cpf_pessoa, descricao as descricao_despesa, valor from transacao where tipo=2;
     
+
+   ![Alt text](     
+    
     select cpf_pessoa, descricao as nome_receita, valor as valor_entradas  from transacao where tipo=4;
+    
+
+   ![Alt text](     
     
     
 
@@ -284,15 +331,33 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     
     select *from pessoa where nome ilike '%ana%';
     
+
+   ![Alt text](     
+    
     select tipo, data_operacao, valor from transacao where descricao like '%pagamento%';
+    
+
+   ![Alt text](     
     
     select descricao, valor, data_operacao from transacao where descricao like '%casa%';
     
+
+   ![Alt text](     
+    
     select *from endereco where logradouro  ilike 'r%' and municipio ilike 's%r%';
+    
+
+   ![Alt text](     
     
     select *from contato where contato like '%gmail%';
     
+
+   ![Alt text](     
+    
     select nome from pessoa where nome ilike '%es%';    
+    
+
+   ![Alt text](     
     
     
     
@@ -301,15 +366,33 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     
     select cpf_pessoa, descricao,valor, current_date - (data_operacao) as realizada_ha_qts_dias from transacao ;
     
+
+   ![Alt text](     
+    
     select cpf_pessoa, descricao, valor, current_date - (data_operacao) as ha_qts_dias_recebeu from transacao where tipo = 4;
+    
+
+   ![Alt text](     
     
     select nome, current_date as hoje, data_nascimento ,(age(current_date, data_nascimento)) as idade_completa from pessoa;
     
+
+   ![Alt text](     
+    
     select nome, current_date as hoje, data_nascimento, date_part ('year', (age(current_date, data_nascimento))) as idade from pessoa;
+    
+
+   ![Alt text](     
     
     select nome, current_date  as hoje , extract('year' from data_nascimento) as ano_nascimento from pessoa;
     
+
+   ![Alt text](     
+    
     select descricao, valor, date_part ('mon', (age(current_date, data_operacao))) as meses_de_investimento from transacao where tipo=3;
+    
+
+   ![Alt text](     
     
     
 
