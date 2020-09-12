@@ -429,28 +429,29 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
-    a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
-    b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
-     
-    /*Pessoas que nao possuem transações*/
+    Nossa base de dados não possui self join, pois não temos tabelas que usam dados delas em si propias, tambem não vimos necessidades do mesmo.
         
-    create view nao_possuem_transacao as select * from pessoa where (pessoa.cpf not in (select transacao.cpf_pessoa from transacao));
-    select * from nao_possuem_transacao;
+    create view pessoa_sem_transacao as select * from pessoa where (pessoa.cpf not in (select transacao.cpf_pessoa from transacao));
+    select * from pessoa_sem_transacao;
 
-        /*Quantidade de transações que cada pessoa possui*/
-        
-        select pessoa.cpf,pessoa.nome, count(pessoa.cpf) as "quantidade de transações"
-        from pessoa
-        inner join transacao
-        on(pessoa.cpf = transacao.cpf_pessoa)
-        group by pessoa.cpf;
+    
+    create view transacao_por_pessoa as
+    select pessoa.cpf,pessoa.nome, count(pessoa.cpf) as "quantidade de transações"
+    from pessoa
+    inner join transacao
+    on(pessoa.cpf = transacao.cpf_pessoa)
+    group by pessoa.cpf;
+    select * from transacao_por_pessoa;
+    
 
-        /*Pessoas que fizeram transacao do tipo saque*/
-        select pessoa.cpf, pessoa.nome, transacao.cod_transacao, /*tipo.descricao_tipo*/ transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
-        inner join transacao
-        on(pessoa.cpf = transacao.cpf_pessoa and transacao.tipo =1)
-        inner join tipo
-        on (transacao.tipo=tipo.cod_tipo);
+    create view transacao_tipo_saque as
+    select pessoa.cpf, pessoa.nome, transacao.cod_transacao, /*tipo.descricao_tipo*/ transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
+    inner join transacao
+    on(pessoa.cpf = transacao.cpf_pessoa and transacao.tipo =1)
+    inner join tipo
+    on (transacao.tipo=tipo.cod_tipo);
+    select * from transacao_tipo_saque;
+    
 
         /*Pessoas que fizeram transacao do tipo despesa*/
         select pessoa.cpf, pessoa.nome, transacao.cod_transacao, /*tipo.descricao_tipo*/ transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
