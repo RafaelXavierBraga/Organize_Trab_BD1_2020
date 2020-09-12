@@ -329,31 +329,31 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
        inner join
        contato on(contato.cpf_pessoa = pessoa.cpf)
        where endereco.estado = 'ES' and tipo.cod_tipo = 4
-       order by nome
+       order by nome;
 
 
        select nome,transacao.descricao,transacao.valor from pessoa
        inner join
        transacao on(pessoa.cpf = transacao.cpf_pessoa)
        where cpf = 10104361234
-       order by valor DESC
+       order by valor DESC;
 
        select pessoa.nome,cpf_pessoa, valor,descricao from transacao
        inner join
        pessoa on(transacao.cpf_pessoa = pessoa.cpf)
        where data_operacao = '2020-07-01'
-       order by valor
+       order by valor;
 
        select nome,contato.contato from pessoa
        inner join
        contato on(contato.cpf_pessoa = pessoa.cpf)
-       order by nome
+       order by nome;
 
        select cep,transacao.cod_transacao,transacao.data_operacao,transacao.valor from endereco
        inner join
        transacao on(endereco.cpf_pessoa = transacao.cpf_pessoa)
        where cep = 29100202
-       order by cep
+       order by cep;
 
        select nome, transacao.valor, transacao.cod_transacao,tipo.descricao_tipo from pessoa
        inner join
@@ -361,13 +361,13 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
        inner join
        tipo on(tipo.cod_tipo = transacao.tipo)
        where tipo.descricao_tipo = "Receita"
-       order by nome
+       order by nome;
 
        select nome, cpf,transacao.valor, transacao.cod_transacao,transacao.descricao from pessoa
        inner join
        transacao on(transacao.cpf_pessoa = pessoa.cpf)
        where transacao.tipo = 4
-       order by nome
+       order by nome;
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
@@ -375,26 +375,26 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     group by nome
 
     select cod_transacao from transacao
-    group by cod_transacao
+    group by cod_transacao;
 
     select nome,count(transacao.cpf_pessoa) from pessoa
     inner join
     transacao on(transacao.cpf_pessoa = pessoa.cpf)
-    group by pessoa.nome
+    group by pessoa.nome;
 
     select nome,count(contato.contato) from pessoa
     inner join
     contato on(contato.cpf_pessoa = pessoa.cpf)
-    group by pessoa.nome
+    group by pessoa.nome;
 
     select cep,cpf_pessoa from endereco
-    group by cep,cpf_pessoa
+    group by cep,cpf_pessoa;
 
     select cpf_pessoa,data_operacao from transacao
-    group by cpf_pessoa,data_operacao
+    group by cpf_pessoa,data_operacao;
 
     select nome,data_nascimento from pessoa
-    group by nome,data_nascimento
+    group by nome,data_nascimento;
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
     a) Criar minimo 1 de cada tipo
