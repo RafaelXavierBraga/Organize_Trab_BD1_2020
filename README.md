@@ -376,7 +376,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
        transacao on(transacao.cpf_pessoa = pessoa.cpf)
        where transacao.tipo = 4
        order by nome;
-   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.6/17.png)
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.6/7.png)
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
