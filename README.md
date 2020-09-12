@@ -112,7 +112,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/bd_modelologico.png)
 
 ### 7	MODELO FÍSICO<br>
-        create table TIPO(cod_tipo int,descricao_tipo varchar(100),primary key (cod_tipo);
+        create table TIPO(cod_tipo int,descricao_tipo varchar(100),primary key (cod_tipo));
         
         create table PESSOA(cpf bigint,nome varchar(100),data_nascimento date,senha varchar(100),primary key (cpf));
         
