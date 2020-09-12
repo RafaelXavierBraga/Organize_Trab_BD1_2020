@@ -332,32 +332,32 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     select *from pessoa where nome ilike '%ana%';
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.4/9.4-a-1.PNG)    
     
     select tipo, data_operacao, valor from transacao where descricao like '%pagamento%';
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.4/9.4-a-2.PNG)    
     
     select descricao, valor, data_operacao from transacao where descricao like '%casa%';
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.4/9.4-a-3.PNG)    
     
     select *from endereco where logradouro  ilike 'r%' and municipio ilike 's%r%';
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.4/9.4-a-4.PNG)    
     
     select *from contato where contato like '%gmail%';
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.4/9.4-a-5.PNG)    
     
     select nome from pessoa where nome ilike '%es%';    
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.4/9.4-a-6.PNG)    
     
     
     
