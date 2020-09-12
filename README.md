@@ -421,14 +421,12 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
        select nome,transacao.descricao,transacao.valor from pessoa
        inner join
        transacao on(pessoa.cpf = transacao.cpf_pessoa)
-       where cpf = 10104361234
        order by valor DESC;
    ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.6/2.png)
 
        select pessoa.nome,cpf_pessoa, valor,descricao from transacao
        inner join
        pessoa on(transacao.cpf_pessoa = pessoa.cpf)
-       where data_operacao = '2020-07-01'
        order by valor;
    ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.6/3.png)
 
