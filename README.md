@@ -367,32 +367,32 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     select cpf_pessoa, descricao,valor, current_date - (data_operacao) as realizada_ha_qts_dias from transacao ;
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.4/9.4-b-1.PNG)    
     
     select cpf_pessoa, descricao, valor, current_date - (data_operacao) as ha_qts_dias_recebeu from transacao where tipo = 4;
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.4/9.4-b-2.PNG)    
     
     select nome, current_date as hoje, data_nascimento ,(age(current_date, data_nascimento)) as idade_completa from pessoa;
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.4/9.4-b-3.PNG)    
     
     select nome, current_date as hoje, data_nascimento, date_part ('year', (age(current_date, data_nascimento))) as idade from pessoa;
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.4/9.4-b-4.PNG)    
     
     select nome, current_date  as hoje , extract('year' from data_nascimento) as ano_nascimento from pessoa;
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.4/9.4-b-5.PNG)    
     
     select descricao, valor, date_part ('mon', (age(current_date, data_operacao))) as meses_de_investimento from transacao where tipo=3;
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.4/9.4-b-6.PNG)    
     
     
 
