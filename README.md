@@ -413,30 +413,27 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
    ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.7/7.png)
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
-    a) Criar minimo 1 de cada tipo
-    
-    /*Mostrar todas os tipos de transações e cpf das pessoas que possuem aquele tipo de transação */
     select tipo.cod_tipo,tipo.descricao_tipo,transacao.cpf_pessoa 
     from tipo
     left outer join transacao
     on (transacao.tipo = tipo.cod_tipo)
     order by tipo.cod_tipo;
 
-    /*Mostrar cpf,nome e cep de pessoas que moram no ES*/
+
     select pessoa.cpf,pessoa.nome,endereco.cep 
     from endereco
     right outer join pessoa
     on(pessoa.cpf = endereco.cpf_pessoa)
     where (endereco.estado = 'ES');
 
-    /*Mostrar o cpf e nome das pessoas que não possuem nenhum tipo de transação*/
+
     select pessoa.cpf, pessoa.nome
     from pessoa 
     full outer join transacao
     on(pessoa.cpf = transacao.cpf_pessoa)
     where transacao.cod_transacao is null;
 
-    /*Me mostre todas as pessoas e suas formas de contato*/
+
     select pessoa.cpf,pessoa.nome,pessoa.data_nascimento,pessoa.senha,contato.contato 
     from pessoa 
     full outer join contato 
@@ -522,29 +519,23 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
-     a) Criar minimo 1 envolvendo GROUP BY
-     b) Criar minimo 1 envolvendo algum tipo de junção
-     
-      /*Mostrar codigo da transacao e nome da pessoa cuja tenha feito uma transação com valor maior que a media das transações*/
+
       select transacao.cod_transacao,pessoa.nome,transacao.descricao from transacao
       inner join pessoa
       on (pessoa.cpf = transacao.cpf_pessoa)
       where(transacao.valor > (select avg(valor) from transacao));
 
-      /*Mostrar tipo de transacao e soma dos valores por tipo apenas das transações maiores que o valor minimo mais 1000*/
       select transacao.tipo, sum(valor)
       from transacao
       where (transacao.valor > (select min(valor) from transacao) + 1000)
       group by tipo 
       order by tipo;
 
-      /**/
       select pessoa.cpf,pessoa.nome, transacao.descricao from pessoa
       inner join transacao
       on(pessoa.cpf = transacao.cpf_pessoa)
       where(transacao.valor < ((select max(valor) from transacao) - (select avg(valor) from transacao)));
 
-      /**/
       select tipo.descricao_tipo,sum(transacao.valor),avg(transacao.valor) as "media por tipo",(select avg(valor)from transacao) as "media geral"  from tipo
       inner join transacao
       on (tipo.cod_tipo = transacao.tipo)
