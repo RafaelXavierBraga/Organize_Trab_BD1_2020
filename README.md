@@ -265,7 +265,8 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 #### c) Consultas com operação de renomear nomes de campos ou tabelas
     
     
-    select cpf_pessoa as cpf_cliente, logradouro, descricao_logradouro as descricao, numero as num, municipio as cidade,estado from endereco as endereco_completo;
+    select cpf_pessoa as cpf_cliente, logradouro, descricao_logradouro as descricao, numero as num, municipio as cidade,estado 
+    from endereco as endereco_completo;
     
     select cpf as cpf_cliente, nome as nome_completo, data_nascimento as dat_nasc from pessoa as Cadastro_Cliente;
     
