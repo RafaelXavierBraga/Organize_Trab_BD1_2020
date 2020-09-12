@@ -445,52 +445,64 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     
 
     create view transacao_tipo_saque as
-    select pessoa.cpf, pessoa.nome, transacao.cod_transacao, /*tipo.descricao_tipo*/ transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
+    select pessoa.cpf, pessoa.nome, transacao.cod_transacao, tipo.descricao_tipo, transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
     inner join transacao
     on(pessoa.cpf = transacao.cpf_pessoa and transacao.tipo =1)
     inner join tipo
     on (transacao.tipo=tipo.cod_tipo);
     select * from transacao_tipo_saque;
+
     
+    create view transacao_tipo_despesa as
+    select pessoa.cpf, pessoa.nome, transacao.cod_transacao, tipo.descricao_tipo, transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
+    inner join transacao
+    on(pessoa.cpf = transacao.cpf_pessoa and transacao.tipo =2)
+    inner join tipo
+    on (transacao.tipo=tipo.cod_tipo);
+    select * from transacao_tipo_despesa;
 
-        /*Pessoas que fizeram transacao do tipo despesa*/
-        select pessoa.cpf, pessoa.nome, transacao.cod_transacao, /*tipo.descricao_tipo*/ transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
-        inner join transacao
-        on(pessoa.cpf = transacao.cpf_pessoa and transacao.tipo =2)
-        inner join tipo
-        on (transacao.tipo=tipo.cod_tipo);
+   
+    create view transacao_tipo_investimento as
+    select pessoa.cpf, pessoa.nome, transacao.cod_transacao, tipo.descricao_tipo, transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
+    inner join transacao
+    on(pessoa.cpf = transacao.cpf_pessoa and transacao.tipo =3)
+    inner join tipo
+    on (transacao.tipo=tipo.cod_tipo);
+    select * from transacao_tipo_investimento;
 
-        /*Pessoas que fizeram transacao do tipo investimento*/
-        select pessoa.cpf, pessoa.nome, transacao.cod_transacao, /*tipo.descricao_tipo*/ transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
-        inner join transacao
-        on(pessoa.cpf = transacao.cpf_pessoa and transacao.tipo =3)
-        inner join tipo
-        on (transacao.tipo=tipo.cod_tipo);
+    
+    create view transacao_tipo_receita as
+    select pessoa.cpf, pessoa.nome, transacao.cod_transacao, tipo.descricao_tipo, transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
+    inner join transacao
+    on(pessoa.cpf = transacao.cpf_pessoa and transacao.tipo =4)
+    inner join tipo
+    on (transacao.tipo=tipo.cod_tipo);
+    select * from transacao_tipo_receita;
 
-        /*Pessoas que fizeram transacao do tipo Receita*/
-        select pessoa.cpf, pessoa.nome, transacao.cod_transacao, /*tipo.descricao_tipo*/ transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
-        inner join transacao
-        on(pessoa.cpf = transacao.cpf_pessoa and transacao.tipo =4)
-        inner join tipo
-        on (transacao.tipo=tipo.cod_tipo);
+    
+    create view transacao_tipo_deposito as
+    select pessoa.cpf, pessoa.nome, transacao.cod_transacao, tipo.descricao_tipo, transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
+    inner join transacao
+    on(pessoa.cpf = transacao.cpf_pessoa and transacao.tipo =5)
+    inner join tipo
+    on (transacao.tipo=tipo.cod_tipo);
+    select * from transacao_tipo_deposito;
 
-        /*Pessoas que fizeram transacao do tipo Deposito*/
-        select pessoa.cpf, pessoa.nome, transacao.cod_transacao, /*tipo.descricao_tipo*/ transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
-        inner join transacao
-        on(pessoa.cpf = transacao.cpf_pessoa and transacao.tipo =5)
-        inner join tipo
-        on (transacao.tipo=tipo.cod_tipo);
+   
+    create view residentes_es as
+    select pessoa.nome,pessoa.cpf,endereco.logradouro,endereco.descricao_logradouro,endereco.numero from pessoa
+    inner join endereco
+    on(pessoa.cpf = endereco.cpf_pessoa and endereco.estado = 'ES');
+    select * from residentes_es;
 
-        /*Pessoas que vivem no ES*/
-        select pessoa.nome,pessoa.cpf,endereco.logradouro,endereco.descricao_logradouro,endereco.numero from pessoa
-        inner join endereco
-        on(pessoa.cpf = endereco.cpf_pessoa and endereco.estado = 'ES');
+   
+    create view soma_por_tipo as
+    select tipo.descricao_tipo, sum(transacao.valor) from tipo
+    inner join transacao
+    on (tipo.cod_tipo = transacao.tipo)
+    group by tipo.descricao_tipo;
+    select * from soma_por_tipo;
 
-        /*soma dos valores por tipo*/
-        select tipo.descricao_tipo, sum(transacao.valor) from tipo
-        inner join transacao
-        on (tipo.cod_tipo = transacao.tipo)
-        group by tipo.descricao_tipo;
 
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
