@@ -445,7 +445,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
         
     create view pessoa_sem_transacao as select * from pessoa where (pessoa.cpf not in (select transacao.cpf_pessoa from transacao));
     select * from pessoa_sem_transacao;
-
+   ![Alt text]()
     
     create view transacao_por_pessoa as
     select pessoa.cpf,pessoa.nome, count(pessoa.cpf) as "quantidade de transações"
@@ -454,7 +454,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     on(pessoa.cpf = transacao.cpf_pessoa)
     group by pessoa.cpf;
     select * from transacao_por_pessoa;
-    
+   ![Alt text]() 
 
     create view transacao_tipo_saque as
     select pessoa.cpf, pessoa.nome, transacao.cod_transacao, tipo.descricao_tipo, transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
@@ -463,7 +463,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     inner join tipo
     on (transacao.tipo=tipo.cod_tipo);
     select * from transacao_tipo_saque;
-
+   ![Alt text]()
     
     create view transacao_tipo_despesa as
     select pessoa.cpf, pessoa.nome, transacao.cod_transacao, tipo.descricao_tipo, transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
@@ -472,7 +472,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     inner join tipo
     on (transacao.tipo=tipo.cod_tipo);
     select * from transacao_tipo_despesa;
-
+   ![Alt text]()
    
     create view transacao_tipo_investimento as
     select pessoa.cpf, pessoa.nome, transacao.cod_transacao, tipo.descricao_tipo, transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
@@ -481,7 +481,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     inner join tipo
     on (transacao.tipo=tipo.cod_tipo);
     select * from transacao_tipo_investimento;
-
+   ![Alt text]()
     
     create view transacao_tipo_receita as
     select pessoa.cpf, pessoa.nome, transacao.cod_transacao, tipo.descricao_tipo, transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
@@ -490,7 +490,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     inner join tipo
     on (transacao.tipo=tipo.cod_tipo);
     select * from transacao_tipo_receita;
-
+   ![Alt text]()
     
     create view transacao_tipo_deposito as
     select pessoa.cpf, pessoa.nome, transacao.cod_transacao, tipo.descricao_tipo, transacao.descricao, transacao.data_operacao, transacao.valor from pessoa
@@ -499,14 +499,14 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     inner join tipo
     on (transacao.tipo=tipo.cod_tipo);
     select * from transacao_tipo_deposito;
-
+   ![Alt text]()
    
     create view residentes_es as
     select pessoa.nome,pessoa.cpf,endereco.logradouro,endereco.descricao_logradouro,endereco.numero from pessoa
     inner join endereco
     on(pessoa.cpf = endereco.cpf_pessoa and endereco.estado = 'ES');
     select * from residentes_es;
-
+   ![Alt text]()
    
     create view soma_por_tipo as
     select tipo.descricao_tipo, sum(transacao.valor) from tipo
@@ -514,31 +514,35 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     on (tipo.cod_tipo = transacao.tipo)
     group by tipo.descricao_tipo;
     select * from soma_por_tipo;
-
+   ![Alt text]()
 
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
 
-      select transacao.cod_transacao,pessoa.nome,transacao.descricao from transacao
-      inner join pessoa
-      on (pessoa.cpf = transacao.cpf_pessoa)
-      where(transacao.valor > (select avg(valor) from transacao));
+    select transacao.cod_transacao,pessoa.nome,transacao.descricao from transacao
+    inner join pessoa
+    on (pessoa.cpf = transacao.cpf_pessoa)
+    where(transacao.valor > (select avg(valor) from transacao));
+   ![Alt text]()
+    
+    select transacao.tipo, sum(valor)
+    from transacao
+    where (transacao.valor > (select min(valor) from transacao) + 1000)
+    group by tipo 
+    order by tipo;
+   ![Alt text]()
 
-      select transacao.tipo, sum(valor)
-      from transacao
-      where (transacao.valor > (select min(valor) from transacao) + 1000)
-      group by tipo 
-      order by tipo;
+    select pessoa.cpf,pessoa.nome, transacao.descricao from pessoa
+    inner join transacao
+    on(pessoa.cpf = transacao.cpf_pessoa)
+    where(transacao.valor < ((select max(valor) from transacao) - (select avg(valor) from transacao)));
+   ![Alt text]()
 
-      select pessoa.cpf,pessoa.nome, transacao.descricao from pessoa
-      inner join transacao
-      on(pessoa.cpf = transacao.cpf_pessoa)
-      where(transacao.valor < ((select max(valor) from transacao) - (select avg(valor) from transacao)));
-
-      select tipo.descricao_tipo,sum(transacao.valor),avg(transacao.valor) as "media por tipo",(select avg(valor)from transacao) as "media geral"  from tipo
-      inner join transacao
-      on (tipo.cod_tipo = transacao.tipo)
-      group by tipo.descricao_tipo;
+    select tipo.descricao_tipo,sum(transacao.valor),avg(transacao.valor) as "media por tipo",(select avg(valor)from transacao) as "media geral"  from tipo
+    inner join transacao
+    on (tipo.cod_tipo = transacao.tipo)
+    group by tipo.descricao_tipo;
+   ![Alt text]()
 
 
 ># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
