@@ -285,17 +285,17 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     select cpf_pessoa, valor, (valor*1.15) as novo_salario from  transacao where descricao = 'salario';
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.3/9.3-b-1.PNG)    
     
     select cpf_pessoa, descricao, valor, (valor *0.03) as rendimento_deposito from transacao where tipo=5;
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.3/9.3-b-2.PNG)    
     
     select cpf_pessoa, descricao, valor, (valor / 2) as Percas_Investimento from transacao where tipo=3;    
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.3/9.3-b-3.PNG)    
     
     
     
