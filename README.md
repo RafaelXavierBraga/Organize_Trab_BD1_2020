@@ -332,6 +332,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
        contato on(contato.cpf_pessoa = pessoa.cpf)
        where endereco.estado = 'ES' and tipo.cod_tipo = 4
        order by nome;
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.6/1.png)
 
 
        select nome,transacao.descricao,transacao.valor from pessoa
@@ -339,23 +340,27 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
        transacao on(pessoa.cpf = transacao.cpf_pessoa)
        where cpf = 10104361234
        order by valor DESC;
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.6/2.png)
 
        select pessoa.nome,cpf_pessoa, valor,descricao from transacao
        inner join
        pessoa on(transacao.cpf_pessoa = pessoa.cpf)
        where data_operacao = '2020-07-01'
        order by valor;
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.6/3.png)
 
        select nome,contato.contato from pessoa
        inner join
        contato on(contato.cpf_pessoa = pessoa.cpf)
        order by nome;
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.6/4.png)
 
        select cep,transacao.cod_transacao,transacao.data_operacao,transacao.valor from endereco
        inner join
        transacao on(endereco.cpf_pessoa = transacao.cpf_pessoa)
        where cep = 29100202
        order by cep;
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.6/5.png)
 
        select nome, transacao.valor, transacao.cod_transacao,tipo.descricao_tipo from pessoa
        inner join
@@ -364,12 +369,14 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
        tipo on(tipo.cod_tipo = transacao.tipo)
        where tipo.descricao_tipo = 'Receita'
        order by nome;
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.6/6.png)
 
        select nome, cpf,transacao.valor, transacao.cod_transacao,transacao.descricao from pessoa
        inner join
        transacao on(transacao.cpf_pessoa = pessoa.cpf)
        where transacao.tipo = 4
        order by nome;
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.6/17.png)
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
