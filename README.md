@@ -234,17 +234,17 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     select cpf_pessoa from endereco where municipio = 'Serra';
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.2/CONSULTAS%20DAS%20TABELAS%20COM%20FILTROS%20WHERE%20-3.PNG)
     
     select descricao, data_operacao, valor from transacao where cpf_pessoa = 47345893011;
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.2/CONSULTAS%20DAS%20TABELAS%20COM%20FILTROS%20WHERE%20-4.PNG)    
     
     select *from pessoa where data_nascimento > '1995-01-01';
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.2/CONSULTAS%20DAS%20TABELAS%20COM%20FILTROS%20WHERE%20-%205.PNG)    
     
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
