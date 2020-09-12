@@ -321,6 +321,30 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
+    select nome from pessoa
+    group by nome
+
+    select cod_transacao from transacao
+    group by cod_transacao
+
+    select nome,count(transacao.cpf_pessoa) from pessoa
+    inner join
+    transacao on(transacao.cpf_pessoa = pessoa.cpf)
+    group by pessoa.nome
+
+    select nome,count(contato.contato) from pessoa
+    inner join
+    contato on(contato.cpf_pessoa = pessoa.cpf)
+    group by pessoa.nome
+
+    select cep,cpf_pessoa from endereco
+    group by cep,cpf_pessoa
+
+    select cpf_pessoa,data_operacao from transacao
+    group by cpf_pessoa,data_operacao
+
+    select nome,data_nascimento from pessoa
+    group by nome,data_nascimento
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
     a) Criar minimo 1 de cada tipo
