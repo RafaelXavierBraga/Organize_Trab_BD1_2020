@@ -255,28 +255,28 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     select *from transacao where (cpf_pessoa = 47345893011 and valor < 5000);
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.3/9.3-a-1.PNG)    
    
     
     select data_operacao, valor from transacao where (cod_transacao >= 1000 and cod_transacao <= 1100);
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.3/9.3-a-2.PNG)    
     
     select cpf_pessoa, descricao, valor from transacao where (tipo = 2) or (tipo = 4);
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.3/9.3-a-3.PNG)    
     
     select *from transacao where(valor >= 2000) or (data_operacao > '2020-06-30');
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.3/9.3-a-4.PNG)    
     
     select *from endereco where estado not in ('ES');
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.3/9.3-a-5.PNG)    
    
     
 #### b) Consultas com operadores aritméticos 
