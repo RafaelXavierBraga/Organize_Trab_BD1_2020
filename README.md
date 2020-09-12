@@ -223,6 +223,18 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
    ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/selectTransacao.png)
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+
+    select *from transacao where valor > 2000;
+    
+    select *from transacao where tipo = 4;
+    
+    select cpf_pessoa from endereco where municipio = 'Serra';
+    
+    select descricao, data_operacao, valor from transacao where cpf_pessoa = 47345893011;
+    
+    select *from pessoa where data_nascimento > '1995-01-01';
+    
+
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos 
