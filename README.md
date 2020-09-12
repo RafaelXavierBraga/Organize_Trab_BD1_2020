@@ -418,27 +418,27 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     left outer join transacao
     on (transacao.tipo = tipo.cod_tipo)
     order by tipo.cod_tipo;
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.8/leftjoin.png)
 
     select pessoa.cpf,pessoa.nome,endereco.cep 
     from endereco
     right outer join pessoa
     on(pessoa.cpf = endereco.cpf_pessoa)
     where (endereco.estado = 'ES');
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.8/rightjoin.png)
 
     select pessoa.cpf, pessoa.nome
     from pessoa 
     full outer join transacao
     on(pessoa.cpf = transacao.cpf_pessoa)
     where transacao.cod_transacao is null;
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.8/isnull.png)
 
     select pessoa.cpf,pessoa.nome,pessoa.data_nascimento,pessoa.senha,contato.contato 
     from pessoa 
     full outer join contato 
     on(pessoa.cpf = contato.cpf_pessoa);
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.8/fulljoin.png)
     
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
     Nossa base de dados não possui self join, pois não temos tabelas que usam dados delas em si propias, tambem não vimos necessidades do mesmo.
