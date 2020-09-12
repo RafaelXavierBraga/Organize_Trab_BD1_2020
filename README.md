@@ -360,7 +360,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
        transacao on(transacao.cpf_pessoa = pessoa.cpf)
        inner join
        tipo on(tipo.cod_tipo = transacao.tipo)
-       where tipo.descricao_tipo = "Receita"
+       where tipo.descricao_tipo = 'Receita'
        order by nome;
 
        select nome, cpf,transacao.valor, transacao.cod_transacao,transacao.descricao from pessoa
