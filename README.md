@@ -236,13 +236,79 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
-    b) Criar no mínimo 3 consultas com operadores aritméticos 
-    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+
+    a) Consultas que envolvam os operadores lógicos AND, OR e Not
+    
+    
+    select *from transacao where (cpf_pessoa = 47345893011 and valor < 5000);
+    
+    select data_operacao, valor from transacao where (cod_transacao >= 1000 and cod_transacao <= 1100);
+    
+    select cpf_pessoa, descricao, valor from transacao where (tipo = 2) or (tipo = 4);
+    
+    select *from transacao where(valor >= 2000) or (data_operacao > '2020-06-30');
+    
+    select *from endereco where estado not in ('ES');
+   
+    
+    b) Consultas com operadores aritméticos 
+    
+    
+    select cpf_pessoa, valor, (valor*1.15) as novo_salario from  transacao where descricao = 'salario';
+    
+    select cpf_pessoa, descricao, valor, (valor *0.03) as rendimento_deposito from transacao where tipo=5;
+    
+    select cpf_pessoa, descricao, valor, (valor / 2) as Percas_Investimento from transacao where tipo=3;    
+    
+    
+    
+    c) Consultas com operação de renomear nomes de campos ou tabelas
+    
+    
+    select cpf_pessoa as cpf_cliente, logradouro, descricao_logradouro as descricao, numero as num, municipio as cidade,estado from endereco as endereco_completo;
+    
+    select cpf as cpf_cliente, nome as nome_completo, data_nascimento as dat_nasc from pessoa as Cadastro_Cliente;
+    
+    select cpf_pessoa, descricao as descricao_despesa, valor from transacao where tipo=2;
+    
+    select cpf_pessoa, descricao as nome_receita, valor as valor_entradas  from transacao where tipo=4;
+    
+    
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
-    a) Criar outras 5 consultas que envolvam like ou ilike
+
+    a) Consultas que envolvam like ou ilike
+    
+    select *from pessoa where nome ilike '%ana%';
+    
+    select tipo, data_operacao, valor from transacao where descricao like '%pagamento%';
+    
+    select descricao, valor, data_operacao from transacao where descricao like '%casa%';
+    
+    select *from endereco where logradouro  ilike 'r%' and municipio ilike 's%r%';
+    
+    select *from contato where contato like '%gmail%';
+    
+    select nome from pessoa where nome ilike '%es%';    
+    
+    
+    
     b) Criar uma consulta para cada tipo de função data apresentada.
+    
+    
+    select cpf_pessoa, descricao,valor, current_date - (data_operacao) as realizada_ha_qts_dias from transacao ;
+    
+    select cpf_pessoa, descricao, valor, current_date - (data_operacao) as ha_qts_dias_recebeu from transacao where tipo = 4;
+    
+    select nome, current_date as hoje, data_nascimento ,(age(current_date, data_nascimento)) as idade_completa from pessoa;
+    
+    select nome, current_date as hoje, data_nascimento, date_part ('year', (age(current_date, data_nascimento))) as idade from pessoa;
+    
+    select nome, current_date  as hoje , extract('year' from data_nascimento) as ano_nascimento from pessoa;
+    
+    select descricao, valor, date_part ('mon', (age(current_date, data_operacao))) as meses_de_investimento from transacao where tipo=3;
+    
+    
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
     a) Criar minimo 3 de exclusão
