@@ -523,26 +523,26 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     inner join pessoa
     on (pessoa.cpf = transacao.cpf_pessoa)
     where(transacao.valor > (select avg(valor) from transacao));
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.10/maiorquemedia.png)
     
     select transacao.tipo, sum(valor)
     from transacao
     where (transacao.valor > (select min(valor) from transacao) + 1000)
     group by tipo 
     order by tipo;
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.10/maiorqueminimo%2B1000.png)
 
     select pessoa.cpf,pessoa.nome, transacao.descricao from pessoa
     inner join transacao
     on(pessoa.cpf = transacao.cpf_pessoa)
     where(transacao.valor < ((select max(valor) from transacao) - (select avg(valor) from transacao)));
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.10/maior-media.png)
 
     select tipo.descricao_tipo,sum(transacao.valor),avg(transacao.valor) as "media por tipo",(select avg(valor)from transacao) as "media geral"  from tipo
     inner join transacao
     on (tipo.cod_tipo = transacao.tipo)
     group by tipo.descricao_tipo;
-   ![Alt text]()
+   ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.10/medias.png)
 
 
 ># Marco de Entrega 02: Do item 9.2 até o ítem 9.10<br>
