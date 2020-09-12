@@ -397,8 +397,24 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
-    a) Criar minimo 3 de exclusão
-    b) Criar minimo 3 de atualização
+    delete from endereco where estado = 'SP';
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.5/1.png)
+
+    delete from contato where contato = 'anagomes@gmail.com';
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.5/2.png)
+
+    delete from transacao where cod_transacao = '1010';
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.5/3.png)
+
+    update contato set contato ='fNunes@hotmail.com' where contato = 'fNunes@gmail.com';
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.5/4.png)
+
+    update pessoa set senha = 'aninha123' where cpf = '10104361234';
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.5/5.png)
+
+    update contato set contato = '27999191772' where contato = 'JAlmeida@gmail.com';
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.5/6.png)
+
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
 
