@@ -306,22 +306,22 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
     from endereco as endereco_completo;
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.3/9.3-c-1.PNG)    
     
     select cpf as cpf_cliente, nome as nome_completo, data_nascimento as dat_nasc from pessoa as Cadastro_Cliente;
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.3/9.3-c-2.PNG)    
     
     select cpf_pessoa, descricao as descricao_despesa, valor from transacao where tipo=2;
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.3/9.3-c-3.PNG)    
     
     select cpf_pessoa, descricao as nome_receita, valor as valor_entradas  from transacao where tipo=4;
     
 
-   ![Alt text](     
+   ![Alt text]( https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/images/9.3/9.3-c-4.PNG)    
     
     
 
