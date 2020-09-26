@@ -152,6 +152,49 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
        
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 
+        drop table tipo;
+        drop table pessoa;
+        drop table contato;
+        drop table edereco;
+        drop table transacao;
+        
+        create table TIPO(
+        cod_tipo int,
+        descricao_tipo varchar(100),
+        primary key (cod_tipo));
+        
+        create table PESSOA(
+        cpf bigint,
+        nome varchar(100),
+        data_nascimento date,
+        senha varchar(100),
+        primary key (cpf));
+        
+        create table CONTATO(
+        cpf_pessoa bigint,
+        contato varchar(100),
+        foreign key (cpf_pessoa) references PESSOA (cpf));       
+        
+        create table ENDERECO(
+        cpf_pessoa bigint,logradouro varchar(100),
+        descricao_logradouro varchar(100),
+        numero int,bairro varchar(100),
+        municipio varchar(100),
+        cep int,
+        estado char(2),
+        foreign key (cpf_pessoa) references PESSOA(cpf));       
+        
+        create table TRANSACAO(
+        cod_transacao int,
+        cpf_pessoa bigint,
+        tipo int,
+        descricao varchar(100),
+        data_operacao date,
+        valor float,
+        primary key (cod_transacao), 
+        foreign key (cpf_pessoa) references PESSOA (cpf),
+        foreign key (tipo) references TIPO(cod_tipo)); 
+        
         INSERT INTO TIPO values
         (1,'Saque'),
         (2,'Despesa'),
@@ -654,7 +697,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
 
 #### a) Modelo (pecha kucha)<br>
- ![Alt text](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/arquivos/BD%20-%20APRESENTA%C3%87%C3%83O%20PK.pptx)
+ ![Slide para apresentação](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/arquivos/BD%20-%20APRESENTA%C3%87%C3%83O%20PK.pptx)
 
 #### b) Tempo de apresentação 6:40 
 
