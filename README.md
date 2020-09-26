@@ -696,9 +696,9 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
 
-#### a) Modelo (pecha kucha)<br>
+#### a) Modelo (pecha kucha) Slides de Apresentação<br>
  ![ Slide para apresentação](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/arquivos/BD%20-%20APRESENTA%C3%87%C3%83O%20PK%20(2).pdf)
-#### b) Tempo de apresentação 6:40 
+#### b) Video de Apresentação dos Slides 
  ![Download do video de Apresentação](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/raw/master/arquivos/BD-Apresenta%C3%A7%C3%A3oOrganize-PK.mp4)
  
  Link do YouTube para Apresentação:(https://youtu.be/nnhBBOkbswU)
