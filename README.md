@@ -688,9 +688,6 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 
 ### 10 RELATÓRIOS E GRÁFICOS
 
-#### a) análises e resultados provenientes do banco de dados desenvolvido (usar modelo disponível)
-#### b) link com exemplo de relatórios será disponiblizado pelo professor no AVA
-#### OBS: Esta é uma atividade de grande relevância no contexto do trabalho. Mantenha o foco nos 5 principais relatórios/resultados visando obter o melhor resultado possível.
 ![Relatório Colab](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/arquivos/RelatorioOrganize.ipynb)
     
 
