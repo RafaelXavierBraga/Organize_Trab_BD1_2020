@@ -155,7 +155,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
         drop table tipo;
         drop table pessoa;
         drop table contato;
-        drop table edereco;
+        drop table endereco;
         drop table transacao;
         
         create table TIPO(
@@ -697,7 +697,7 @@ E cada transação deve possuir um tipo que deverão possuir código e descriç�
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
 
 #### a) Modelo (pecha kucha)<br>
- ![Slide para apresentação](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/arquivos/BD%20-%20APRESENTA%C3%87%C3%83O%20PK.pptx)
+ ![ Slide para apresentação](https://github.com/RafaelXavierBraga/Organize_Trab_BD1_2020/blob/master/arquivos/BD%20-%20APRESENTA%C3%87%C3%83O%20PK.pptx)
 
 #### b) Tempo de apresentação 6:40 
 
